@@ -1,0 +1,2 @@
+# zephyr_esp32_blinky
+为ESP32编译Zephyr的Blinky示例
