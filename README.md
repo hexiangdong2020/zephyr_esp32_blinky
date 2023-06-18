@@ -46,13 +46,17 @@ https://www.jianguoyun.com/p/DSzhOA4Qq47dCxiQ_o4FIAA
 west build -p always -b esp32 samples/basic/blinky
 ```
 如果得到下列输出，则表示编译成功：
-![[Screenshot from 2023-06-18 20-47-19.png]]
+
+![编译成功输出](https://github.com/hexiangdong2020/zephyr_esp32_blinky/blob/main/Screenshot%20from%202023-06-18%2020-47-19.png?raw=true "编译成功输出")
 ### 3 烧录Blinky示例
 将ESP-WROOM-32通过USB连接线连接到计算机上，执行下列命令烧录：
 ```bash
 west flash
 ```
 如果得到下列输出，则表示烧录成功：
-![[Screenshot from 2023-06-18 20-50-03.png]]
+
+![烧录成功输出](https://github.com/hexiangdong2020/zephyr_esp32_blinky/blob/main/Screenshot%20from%202023-06-18%2020-50-03.png?raw=true "烧录成功输出")
+
 观测ESP-WROOM-32开发板，可以看到板载的蓝色指示灯已经开始闪烁了，说明程序运行成功。
-![[微信图片_20230618230300.jpg]]
+
+![ESP32运行Blinky示例](https://github.com/hexiangdong2020/zephyr_esp32_blinky/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230618230300.jpg?raw=true "ESP32运行Blinky示例")
