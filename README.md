@@ -43,7 +43,7 @@ https://www.jianguoyun.com/p/DSzhOA4Qq47dCxiQ_o4FIAA
 ```
 然后，使用下列命令进行编译：
 ```bash
-west build -p always -b esp32 samples/basic/blinky
+west build -p always -b esp32_devkitc_wroom --pristine=always . -- -DDTC_OVERLAY_FILE=boards/esp32.overlay
 ```
 如果得到下列输出，则表示编译成功：
 
