@@ -68,7 +68,7 @@ esp32/setup-zephyr-dev-env.sh
 ```bash
 git clone git@github.com:luoxianwu/zephyr_esp32_blinky.git
 cd zephyr_esp32_blinky
-source ~/zephyrproject/.venv/activate
+source ~/zephyrproject/.venv/bin/activate
 export ZEPHYR_BASE=~/zephyrproject/zephyr
 west build -p always -b esp32_devkitc_wroom --pristine=always . -- -DDTC_OVERLAY_FILE=boards/esp32.overla
 west flash
