@@ -43,7 +43,8 @@ https://www.jianguoyun.com/p/DSzhOA4Qq47dCxiQ_o4FIAA
 ```
 然后，使用下列命令进行编译：
 ```bash
-west build -p always -b esp32 samples/basic/blinky
+cd samples/basic/blinky
+west build -p always -b esp32_devkitc_wroom --pristine=always . -- -DDTC_OVERLAY_FILE=boards/esp32.overlay
 ```
 如果得到下列输出，则表示编译成功：
 
@@ -60,3 +61,18 @@ west flash
 观测ESP-WROOM-32开发板，可以看到板载的蓝色指示灯已经开始闪烁了，说明程序运行成功。
 
 ![ESP32运行Blinky示例](https://github.com/hexiangdong2020/zephyr_esp32_blinky/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230618230300.jpg?raw=true "ESP32运行Blinky示例")
+
+# 1. Setup zephyr dev environment
+git clone git@github.com:luoxianwu/esp32.git
+esp32/setup-zephyr-dev-env.sh
+# 2. get blinky source
+```bash
+git clone git@github.com:luoxianwu/zephyr_esp32_blinky.git
+cd zephyr_esp32_blinky
+source ~/zephyrproject/.venv/bin/activate
+export ZEPHYR_BASE=~/zephyrproject/zephyr
+west build -p always -b esp32_devkitc_wroom --pristine=always . -- -DDTC_OVERLAY_FILE=boards/esp32.overla
+west flash
+```
+
+
